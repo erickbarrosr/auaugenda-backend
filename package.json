@@ -9,7 +9,7 @@
     "prisma:migrate": "prisma migrate deploy",
     "prisma:generate": "prisma generate",
     "postinstall": "pnpm prisma generate && pnpm prisma:migrate",
-    "build": "pnpm install && pnpm prisma generate"
+    "build": "pnpm prisma generate"
   },
   "keywords": [],
   "author": "",
