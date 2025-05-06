@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "dev": "pnpm exec nodemon src/server.js",
     "prisma:migrate": "prisma migrate deploy",
     "prisma:generate": "prisma generate",
-    "build": "npm install && prisma generate"
+    "postinstall": "pnpm prisma generate && pnpm prisma:migrate",
+    "build": "pnpm install && pnpm prisma generate"
   },
   "keywords": [],
   "author": "",
